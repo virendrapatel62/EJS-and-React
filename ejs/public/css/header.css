@@ -1,0 +1,9 @@
+header {
+  display: flex;
+}
+
+header a {
+  border: 0.6px solid rgb(213, 211, 211);
+  padding: 4px;
+  margin: 2px;
+}

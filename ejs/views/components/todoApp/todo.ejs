@@ -1,0 +1,25 @@
+<!-- <tr>
+  <td><%= +index+1 %></td>
+  <td><%= todo.title %></td>
+  <td>
+    <form action="/todos/delete" method="post">
+      <input
+        type="text"
+        name="id"
+        readonly
+        hidden
+        value="<%= todo.id %>"
+        id=""
+      />
+      <button type="submit">Delete ❌</button>
+    </form>
+  </td>
+</tr> -->
+
+<div style="flex-grow: 1; border: 1px solid green; margin: 5px">
+  <h2><%= todo.title%></h2>
+  <form action="/todos/delete" method="post">
+    <input type="text" name="id" readonly hidden value="<%= todo.id %>" id="" />
+    <button type="submit">Delete ❌</button>
+  </form>
+</div>

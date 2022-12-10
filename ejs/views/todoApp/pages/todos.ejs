@@ -1,0 +1,52 @@
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid rgb(163, 158, 158);
+    text-align: left;
+  }
+</style>
+
+<!-- including header -->
+<%- include('../../components/header'); %>
+<h1>TOdo List</h1>
+
+<a href="/create-todo">Create Todo</a>
+<hr />
+
+<form action="/create-todo" method="post">
+  <tr>
+    <td></td>
+    <td><input autofocus type="text" name="title" id="title" /></td>
+  </tr>
+</form>
+
+<% if(!todos.length){ %>
+<h1>No Todos !!! 😢</h1>
+<% } else { %>
+
+<table>
+  <!-- <thead>
+    <tr>
+      <th>Sno</th>
+      <th>Title</th>
+      <th>Actions</th>
+    </tr>
+  </thead> -->
+  <div style="display: flex">
+    <% for(let index in todos){ %>
+    <!-- todo Componnets -->
+    <%- include('../../components/todoApp/todo.ejs' , {index ,todo :
+    todos[index]}); %>
+    <!-- end -->
+    <% } %>
+  </div>
+</table>
+
+<% }%>
+<!-- including footer -->
+<%- include('../../components/footer'); %>

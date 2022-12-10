@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p><%= student.name %></p>
+    <p><%= student.age %></p>
+    <p><%= student.address %></p>
+    <p><%= student.marks %></p>
+
+    <% if(student.name == 'virendra') { %>
+    <h1>This is admin</h1>
+    <% }else { %>
+    <h1>This is User</h1>
+    <% }%> 
+    
+    <!-- for loop -->
+    <% for(let mark of student.marks) { %> 
+         <h1><%= mark %></h1>
+        <% }%>
+  </body>
+</html>

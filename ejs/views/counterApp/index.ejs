@@ -1,0 +1,17 @@
+
+    <%- include('../components/header'); %>
+    <h1>Counter App</h1>
+
+    <hr />
+
+    <div class="wrapper">
+      <a href="/counter/minus"><button>➖</button></a>
+      <h4
+        class="<%= (counterValue==0 ? '' : (counterValue > 0 ? 'green' : 'red')) %>"
+      >
+        <%= counterValue%>
+      </h4>
+      <a href="/counter/plus"><button>➕</button></a>
+    </div>
+  </body>
+</html>
